@@ -12,6 +12,11 @@
         <h1 class="text-center mt-4 mb-4">ADD PRODUCT</h1>
         <div class=" row mb-3 ">
 
+            <label class="col-4 text-center d-flex justify-content-center align-items-center" for="name">Id</label>
+            <input class="col-6 bg-white" style="width: '50%;" type="text" id="id" name="id" placeholder="Id" />
+        </div>
+        <div class=" row mb-3 ">
+
             <label class="col-4 text-center d-flex justify-content-center align-items-center" for="name">Product name</label>
             <input class="col-6 bg-white" style="width: '50%;" type="text" id="name" name="name" placeholder="Product name" />
         </div>
@@ -19,6 +24,11 @@
         <div class=" row mb-3">
             <label class="col-4 text-center d-flex justify-content-center align-items-center" for="lname">Price</label>
             <input class="col-6 bg-white" type="text" id="price" name="price" placeholder="Price" />
+
+        </div>
+        <div class=" row mb-3">
+            <label class="col-4 text-center d-flex justify-content-center align-items-center" for="lname">New Price</label>
+            <input class="col-6 bg-white" type="text" id="newprice" name="newprice" placeholder="New Price" />
 
         </div>
         <div class=" row mb-3">

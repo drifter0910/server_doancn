@@ -15,8 +15,10 @@ return new class extends Migration
     {
         Schema::create('checkouts', function (Blueprint $table) {
             $table->id();
+            $table->string('userid');
             $table->string('username');
             $table->string('email');
+            $table->string('phone');
             $table->string('detail');
             $table->string('totalprice');
             $table->string('address');

@@ -47,7 +47,7 @@ Route::get('getorder/{userid}', [CheckoutConrtoller::class, 'getorder']);
 Route::post('addnewfeed', [NewFeedsController::class, 'addnewfeed']);
 Route::get('getnewfeed', [NewFeedsController::class, 'getnewfeed']);
 
-
+Route::get('getcategory', [ProductController::class, 'getCategory']);
 
 
 

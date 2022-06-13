@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\banner;
+use App\Models\Category;
+
 use Illuminate\Support\Facades\Response;
 use Illuminate\Http\Request;
 use App\Models\Product;
@@ -12,8 +14,10 @@ class ProductController extends Controller
     function addproduct(Request $req)
     {
         $product = new Product;
+        $product->id = $req->id;
         $product->name = $req->name;
         $product->price = $req->price;
+        $product->newprice = $req->newprice;
         $product->discount = $req->discount;
         $product->description = $req->description;
         $product->category = $req->category;
@@ -90,6 +94,12 @@ class ProductController extends Controller
     {
 
         return Product::all();
+        return response()->json($req);
+    }
+    function getCategory(Request $req)
+    {
+
+        return Category::all();
         return response()->json($req);
     }
 

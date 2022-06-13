@@ -32,7 +32,7 @@ class UserController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return response()->json(["status" => "failed", "messageRegister" => "validation_error", "errors" => $validator->errors()]);
+            return response()->json(["status" => "failed", "messageRegister" => "Error! Please try again", "errors" => $validator->errors()]);
         }
         $userDataArray          =       array(
             "name"               =>          $request->name,
@@ -70,7 +70,7 @@ class UserController extends Controller
         }
         $user = Auth::user();
         $token = $user->createToken('token')->plainTextToken;
-        $cookie = cookie('jwt', $token, minutes: 60 * 24);
+        $cookie = cookie('jwt', $token, minutes: 6000 * 24);
         // return $token;
         return response([
             'message' => 'Login success!',
